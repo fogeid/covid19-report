@@ -1,5 +1,8 @@
 # covid19-report-brazil
 
+![Tela desktop](public/desktop.png)
+![Tela desktop](public/mobile.png)
+
 ## Project setup
 ```
 npm install
