@@ -1,7 +1,7 @@
 # covid19-report-brazil
 
-![Tela desktop](./public/desktop.png)
-![Tela desktop](./public/mobile.png)
+![Tela desktop](https://i.imgur.com/G6BsWBr.png)
+![Tela mobile](https://i.imgur.com/EBUcbS2.png)
 
 ## Project setup
 ```
