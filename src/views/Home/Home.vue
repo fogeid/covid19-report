@@ -1,12 +1,32 @@
 <template>
     <div id="app">
-        
+        <div class="container">
+            <header>
+                <app-header />                
+            </header>
+        </div>
+        <app-select />
+        <app-card />
+        <app-footer />
     </div>
 </template>
 
 
 <script>
-    export default {
-        
+import Header from '@/components/template/Header.vue';
+import Select from '@/components/template/Select.vue';
+import Card from '@/components/template/Card.vue';
+import Footer from '@/components/template/Footer.vue';
+
+export default {
+    name: 'Home',
+    components:{
+        'app-header': Header,
+        'app-select': Select,
+        'app-card': Card,
+        'app-footer': Footer
     }
+}
 </script>
+
+<style src="./style.scss" lang="scss" scoped />
