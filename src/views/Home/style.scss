@@ -5,3 +5,18 @@
 @import '@/components/template/select.scss';
 @import '@/components/template/card.scss';
 @import '@/components/template/footer.scss';
+
+.app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.main {
+    background-color: $color-background;
+    height: 468px;
+}
+
+.footer {
+    margin-top: auto;
+}

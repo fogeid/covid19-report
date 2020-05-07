@@ -1,9 +1,10 @@
+@import '@/assets/scss/_reset.scss';
 @import '@/assets/scss/_bootstrap.scss';
 @import '@/assets/scss/_colors.scss';
 @import '@/assets/scss/_responsividade.scss';
 
 .seletor {
-    margin-top: 30px;
+    padding-top: 30px;
 }
 
 .title {

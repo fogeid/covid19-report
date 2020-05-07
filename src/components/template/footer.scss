@@ -1,0 +1,16 @@
+@import '@/assets/scss/_reset.scss';
+@import '@/assets/scss/_responsividade.scss';
+@import '@/assets/scss/_colors.scss';
+
+.footer {
+    background-color: $color-footer;
+    
+    .footer__title {
+        text-align: center;
+        color: $color-text-secondary;
+        padding: 15px;
+        .footer__title__link {
+            color: $color-text-primary;
+        }
+    }
+}
