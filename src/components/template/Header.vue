@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header">
-            <a href="#"><img :src="logo" alt="Covid-19 Brazil"></a>
+            <a class="header__logo" href="#"><img :src="logo" alt="Covid-19 Brazil"></a>
         </div>
     </div>
 </template>

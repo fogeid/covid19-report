@@ -1,0 +1,16 @@
+@import '@/assets/scss/_responsividade.scss';
+@import '@/assets/scss/_colors.scss';
+
+.header {
+    background: $color-header;
+    text-align: center;
+    .header__logo {        
+        img {
+            max-width: 30%;
+            padding: 15px 0 15px 0;
+            @include device(desktop) {
+            max-width: 100%;
+            }
+        }
+    }
+}
