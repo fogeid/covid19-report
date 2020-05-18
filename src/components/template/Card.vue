@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <h2>{{ title }}</h2>
-            <h1>{{ casos || mortes || curados || suspeitos }}</h1>
+            <h1>{{ cases || deaths || refuses || suspects }}</h1>
         </div>
     </div>
 </template>

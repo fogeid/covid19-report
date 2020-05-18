@@ -39,9 +39,6 @@ export default {
             .then(res => {
                 this.regioes = res;                           
             });
-        },
-        selecionar(e) {
-            console.log(e);
         }
     },
     watch: {
