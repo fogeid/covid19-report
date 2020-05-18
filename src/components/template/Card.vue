@@ -10,7 +10,7 @@
 <script>
 export default {
     name: "Card",
-    props: ["title", "casos", "mortes", "curados", "suspeitos"]    
+    props: ["title", "cases", "deaths", "refuses", "suspects"]    
 }
 </script>
 
