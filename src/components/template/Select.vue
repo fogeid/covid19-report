@@ -4,8 +4,7 @@
             <div class="seletor d-flex justify-content-center">
                 <select name="regioes" id="regioes"  class="form-control col-md-6" v-model="regiaoSelecionada">
                     <option disabled value="">Selecione o estado</option>
-                    <option v-for="(valor, index) in regioes.data "
-                            @click="selecionar(valor)"                          
+                    <option v-for="(valor, index) in regioes.data"                          
                             :key="index"
                             :value="valor.state">
                             {{ valor.state }}                            
