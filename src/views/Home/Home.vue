@@ -8,10 +8,10 @@
                 <app-select @dados="getDados" />
             </section>
             <section class="cards">
-                <app-card :casos="regioes.cases" title="Casos Confirmados" />
-                <app-card :mortes="regioes.deaths" title="Mortes" />
-                <app-card :curados="regioes.refuses" title="Curados" />
-                <app-card :suspeitos="regioes.suspects" title="Suspeitos" />
+                <app-card class="cards__item" :casos="regioes.cases" title="Casos Confirmados" />
+                <app-card class="cards__item" :mortes="regioes.deaths" title="Mortes" />
+                <app-card class="cards__item" :curados="regioes.refuses" title="Curados" />
+                <app-card class="cards__item" :suspeitos="regioes.suspects" title="Suspeitos" />
             </section>
         </main>
         <footer class="footer">
