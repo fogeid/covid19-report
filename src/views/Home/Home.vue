@@ -8,10 +8,10 @@
                 <app-select @dados="getDados" />
             </section>
             <section class="cards">
-                <app-card title="Casos Confirmados" />
-                <app-card title="Mortes" />
-                <app-card title="Curados" />
-                <app-card title="Suspeitos" />
+                <app-card :casos="regioes.cases" title="Casos Confirmados" />
+                <app-card :mortes="regioes.deaths" title="Mortes" />
+                <app-card :curados="regioes.refuses" title="Curados" />
+                <app-card :suspeitos="regioes.suspects" title="Suspeitos" />
             </section>
         </main>
         <footer class="footer">
@@ -42,7 +42,7 @@ export default {
     methods: {
         getDados(event) {
             this.regioes = event;
-            console.log(this.regioes[0].cases);
+            console.log(this.regioes);
         }
     }
 }

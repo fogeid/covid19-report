@@ -2,9 +2,10 @@
     <div>
         <div class="select">      
             <div class="seletor d-flex justify-content-center">
-                <select name="regioes" id="regioes" class="form-control col-md-6" v-model="regiaoSelecionada">
+                <select name="regioes" id="regioes"  class="form-control col-md-6" v-model="regiaoSelecionada">
                     <option disabled value="">Selecione o estado</option>
-                    <option v-for="(valor, index) in regioes.data"                            
+                    <option v-for="(valor, index) in regioes.data "
+                            @click="selecionar(valor)"                          
                             :key="index"
                             :value="valor.state">
                             {{ valor.state }}                            
@@ -37,14 +38,17 @@ export default {
             fetch("https://covid19-brazil-api.now.sh/api/report/v1")
             .then(res => res.json())
             .then(res => {
-                this.regioes = res;
-                this.$emit("dados", this.regioes.data);                
+                this.regioes = res;                           
             });
+        },
+        selecionar(e) {
+            console.log(e);
         }
     },
     watch: {
         regiaoSelecionada(valor) {
             this.estado = this.regioes.data.find((es) => es.state === valor);
+            this.$emit("dados", this.estado);
         }
     }
 }
