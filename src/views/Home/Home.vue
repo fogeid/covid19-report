@@ -5,7 +5,7 @@
         </header>
         <main class="container-fluid main">
             <section class="buscar">
-                <app-select />
+                <app-select @dados="getDados" />
             </section>
             <section class="cards">
                 <app-card title="Casos Confirmados" />
@@ -33,6 +33,17 @@ export default {
         'app-select': Select,
         'app-card': Card,
         'app-footer': Footer
+    },
+    data() {
+        return {
+            regioes: [],
+        }
+    },
+    methods: {
+        getDados(event) {
+            this.regioes = event;
+            console.log(this.regioes[0].cases);
+        }
     }
 }
 </script>

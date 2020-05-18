@@ -4,9 +4,11 @@
             <div class="seletor d-flex justify-content-center">
                 <select name="regioes" id="regioes" class="form-control col-md-6" v-model="regiaoSelecionada">
                     <option disabled value="">Selecione o estado</option>
-                    <option v-for="(valor, index) in regioes.data"
-                            v-bind:key="index"
-                            :value="valor.state">{{ valor.state }}</option>
+                    <option v-for="(valor, index) in regioes.data"                            
+                            :key="index"
+                            :value="valor.state">
+                            {{ valor.state }}                            
+                    </option>
                 </select>
             </div>     
             <div>
@@ -23,18 +25,20 @@ export default {
         return {
             regioes: {},
             estado: '',
+            chave: Number,
             regiaoSelecionada: ''
         }
     },
     created() {
         this.getDados();
-    },
+    },  
     methods: {
         getDados() {
             fetch("https://covid19-brazil-api.now.sh/api/report/v1")
             .then(res => res.json())
             .then(res => {
                 this.regioes = res;
+                this.$emit("dados", this.regioes.data);                
             });
         }
     },

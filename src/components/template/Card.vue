@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <h2>{{ title }}</h2>
-            <h1>36512</h1>
+            <h1>{{ casos }}</h1>
         </div>
     </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 export default {
     name: "Card",
-    props: ["title", "statistic", "regiaoSelecionada"]    
+    props: ["title", "casos", "mortes", "curados", "suspeitos"]    
 }
 </script>
 
