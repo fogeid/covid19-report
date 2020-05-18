@@ -3,13 +3,14 @@
         <div class="select">      
             <div class="seletor d-flex justify-content-center">
                 <select name="regioes" id="regioes" class="form-control col-md-6" v-model="regiaoSelecionada">
+                    <option disabled value="">Selecione o estado</option>
                     <option v-for="(valor, index) in regioes.data"
                             v-bind:key="index"
                             :value="valor.state">{{ valor.state }}</option>
                 </select>
             </div>     
             <div>
-                <h1 class="title"># {{ estado.state }} #</h1>
+                <h1 class="title"># {{ regiaoSelecionada }} #</h1>
             </div>                 
         </div>
     </div>
@@ -17,6 +18,7 @@
 
 <script>
 export default {
+    name: "Select",
     data() {
         return {
             regioes: {},
@@ -24,7 +26,7 @@ export default {
             regiaoSelecionada: ''
         }
     },
-    mounted() {
+    created() {
         this.getDados();
     },
     methods: {

@@ -4,12 +4,15 @@
             <app-header />
         </header>
         <main class="container-fluid main">
-            <div>
+            <section class="buscar">
                 <app-select />
-            </div>
-            <div>
-                <!-- <app-card /> -->
-            </div>
+            </section>
+            <section class="cards">
+                <app-card title="Casos Confirmados" />
+                <app-card title="Mortes" />
+                <app-card title="Curados" />
+                <app-card title="Suspeitos" />
+            </section>
         </main>
         <footer class="footer">
             <app-footer />
@@ -17,11 +20,10 @@
     </div>
 </template>
 
-
 <script>
 import Header from '@/components/template/Header.vue';
 import Select from '@/components/template/Select.vue';
-// import Card from '@/components/template/Card.vue';
+import Card from '@/components/template/Card.vue';
 import Footer from '@/components/template/Footer.vue';
 
 export default {
@@ -29,7 +31,7 @@ export default {
     components:{
         'app-header': Header,
         'app-select': Select,
-        // 'app-card': Card,
+        'app-card': Card,
         'app-footer': Footer
     }
 }

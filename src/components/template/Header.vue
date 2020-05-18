@@ -8,6 +8,7 @@
 
 <script>
 export default {
+    name: "Header",
     data() {
         return {
             logo: 'logo.png',

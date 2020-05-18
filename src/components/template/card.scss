@@ -1,0 +1,21 @@
+@import '@/assets/scss/_reset.scss';
+@import '@/assets/scss/_bootstrap.scss';
+@import '@/assets/scss/_colors.scss';
+@import '@/assets/scss/_responsividade.scss';
+
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: $color-card;
+    color: $color-text-light;
+    text-align: center;
+    border-radius: 10px;
+    h2 {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    h1 {
+        font-size: 3rem;
+        margin-top: 50px;
+    }
+}
