@@ -4,7 +4,7 @@
             <app-header />
         </header>
         <main class="container-fluid main">
-            <section class="buscar">
+            <section class="search">
                 <app-select @data="getData" />
             </section>
             <section class="cards">
