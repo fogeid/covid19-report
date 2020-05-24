@@ -5,13 +5,13 @@
         </header>
         <main class="container-fluid main">
             <section class="buscar">
-                <app-select @dados="getDados" />
+                <app-select @data="getData" />
             </section>
             <section class="cards">
-                <app-card class="cards__item" :cases="regioes.cases" title="Casos Confirmados" />
-                <app-card class="cards__item" :deaths="regioes.deaths" title="Mortes" />
-                <app-card class="cards__item" :refuses="regioes.refuses" title="Curados" />
-                <app-card class="cards__item" :suspects="regioes.suspects" title="Suspeitos" />
+                <app-card class="cards__item" :cases="regions.cases" title="Casos Confirmados" />
+                <app-card class="cards__item" :deaths="regions.deaths" title="Mortes" />
+                <app-card class="cards__item" :refuses="regions.refuses" title="Curados" />
+                <app-card class="cards__item" :suspects="regions.suspects" title="Suspeitos" />
             </section>
         </main>
         <footer class="footer">
@@ -36,12 +36,12 @@ export default {
     },
     data() {
         return {
-            regioes: [],
+            regions: [],
         }
     },
     methods: {
-        getDados(event) {
-            this.regioes = event;
+        getData(event) {
+            this.regions = event;
         }
     }
 }

@@ -2,17 +2,17 @@
     <div>
         <div class="select">      
             <div class="seletor d-flex justify-content-center">
-                <select name="regioes" id="regioes"  class="form-control col-md-6" v-model="regiaoSelecionada">
+                <select name="regions" id="regions"  class="form-control col-md-6" v-model="regionSelected">
                     <option disabled value="">Selecione o estado</option>
-                    <option v-for="(valor, index) in regioes.data"                          
+                    <option v-for="(value, index) in regions.data"                          
                             :key="index"
-                            :value="valor.state">
-                            {{ valor.state }}                            
+                            :value="value.state">
+                            {{ value.state }}                            
                     </option>
                 </select>
             </div>     
             <div>
-                <h1 class="title"># {{ regiaoSelecionada }} #</h1>
+                <h1 class="title"># {{ regionSelected }} #</h1>
             </div>                 
         </div>
     </div>
@@ -23,28 +23,27 @@ export default {
     name: "Select",
     data() {
         return {
-            regioes: {},
-            estado: '',
-            chave: Number,
-            regiaoSelecionada: ''
+            regions: {},
+            state: '',
+            regionSelected: ''
         }
     },
     created() {
-        this.getDados();
+        this.getData();
     },  
     methods: {
-        getDados() {
+        getData() {
             fetch("https://covid19-brazil-api.now.sh/api/report/v1")
             .then(res => res.json())
             .then(res => {
-                this.regioes = res;                           
+                this.regions = res;                           
             });
         }
     },
     watch: {
-        regiaoSelecionada(valor) {
-            this.estado = this.regioes.data.find((es) => es.state === valor);
-            this.$emit("dados", this.estado);
+        regionSelected(value) {
+            this.state = this.regions.data.find((es) => es.state === value);
+            this.$emit("data", this.state);
         }
     }
 }
