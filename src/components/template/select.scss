@@ -1,10 +1,12 @@
 @import '@/assets/scss/_reset.scss';
+@import '@/assets/scss/_font.scss';
 @import '@/assets/scss/_colors.scss';
 @import '@/assets/scss/_responsividade.scss';
 
 
 .select {
     text-align: center;
+    font-family: $font;
     .select__box {
         padding-top: 30px;
         .select__input {
