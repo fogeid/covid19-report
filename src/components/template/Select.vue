@@ -1,8 +1,8 @@
 <template>
     <div>
         <div class="select">      
-            <div class="seletor d-flex justify-content-center">
-                <select name="regions" id="regions"  class="form-control col-md-6" v-model="regionSelected">
+            <div class="select__box">
+                <select name="regions" id="regions"  class="select__input" v-model="regionSelected">
                     <option disabled value="">Selecione o estado</option>
                     <option v-for="(value, index) in regions.data"                          
                             :key="index"

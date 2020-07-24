@@ -1,9 +1,10 @@
 @import '@/assets/scss/_reset.scss';
-@import '@/assets/scss/_bootstrap.min.scss';
+@import '@/assets/scss/_font.scss';
 @import '@/assets/scss/_colors.scss';
 @import '@/assets/scss/_responsividade.scss';
 
 .card {
+    font-family: $font;
     width: 250px;
     height: 250px;
     background-color: $color-card;
@@ -13,6 +14,7 @@
     h2 {
         font-size: 1rem;
         margin-top: 20px;
+        padding-top: 40px;
     }
     h1 {
         font-size: 3rem;

@@ -1,19 +1,29 @@
 @import '@/assets/scss/_reset.scss';
-@import '@/assets/scss/_bootstrap.min.scss';
 @import '@/assets/scss/_colors.scss';
 @import '@/assets/scss/_responsividade.scss';
 
-.seletor {
-    padding-top: 30px;
-}
 
-.title {
-    margin-top: 15px;
-    color: $color-text-primary;
-    font-weight: bold;
-    font-size: 24px;
-    text-align: center;    
-    @include device(desktop) {
-        font-size: 38px;
+.select {
+    text-align: center;
+    .select__box {
+        padding-top: 30px;
+        .select__input {
+            width: 80%;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+    }
+    .title {
+        margin-top: 15px;
+        color: $color-text-primary;
+        font-weight: bold;
+        font-size: 24px;
+        text-align: center;    
+        @include device(desktop) {
+            font-size: 38px;
+        }
     }
 }
+
+
+
